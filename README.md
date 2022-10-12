@@ -1,5 +1,6 @@
 # Me Portfolio Website
 still under development tho
+I do be using Vue, das all
 ## Project setup
 ```
 npm install
