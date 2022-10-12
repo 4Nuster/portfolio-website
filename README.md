@@ -1,5 +1,5 @@
-# portfolio-website
-
+# Me Portfolio Website
+still under development tho
 ## Project setup
 ```
 npm install
