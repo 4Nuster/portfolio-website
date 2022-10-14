@@ -1,9 +1,11 @@
 <template>
-  <article class="scroller">
+  <article class="scroller h-screen">
     <section class="hero grid grid-cols-2 h-screen content-center">
       <div class="hero-left-container">
         <div class="hero-left -skew-x-12 -skew-y-1">
-          <h1 class="title hero-text drop-shadow-[-.05em_.05em_4px_#1f3f6f49]">
+          <h1
+            class="title glitch-animation-class hero-text drop-shadow-[-.5rem_.5rem_4px_#1f3f6f49]"
+          >
             <span style="--index: 0">YASSINE BACHA</span>
             <span style="--index: 1">YASSINE BACHA</span>
             <span style="--index: 2">YASSINE BACHA</span>
@@ -23,7 +25,23 @@
       </div>
       <div class="hero-right"></div>
     </section>
-    <section class="skills"></section>
+    <section class="skills grid grid-cols-5 h-screen">
+      <div class="col-span-3 -skew-x-12 -skew-y-1">DESCRIPTION GOES HERE</div>
+      <div
+        class="skills-menu col-span-2 grid gap-0 grid-cols-2 -skew-x-12 -skew-y-1"
+      >
+        <div class="skill left-skills"><span>JAVASCRIPT</span></div>
+        <div class="skill right-skills"><span>HTML/CSS</span></div>
+        <div class="skill left-skills"><span>PYTHON</span></div>
+        <div class="skill right-skills"><span>JAVA</span></div>
+        <div class="skill left-skills"><span>DATABASES</span></div>
+        <div class="skill right-skills"><span>UI/UX</span></div>
+        <div class="skill left-skills"><span>GRAPHIC DESIGN</span></div>
+        <div class="skill right-skills"><span>3D MODELING</span></div>
+        <div class="skill left-skills"><span>GAME DEV</span></div>
+        <div class="skill right-skills"><span>C/C++</span></div>
+      </div>
+    </section>
   </article>
 </template>
 
@@ -35,15 +53,26 @@ export default {};
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
 @import url("https://fonts.googleapis.com/css?family=Russo+One");
 
-.scroller {
+body {
   height: 100vh;
+  overflow-y: hidden;
+}
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+.scroller {
   overflow-y: scroll;
+  overflow-x: hidden;
   scroll-snap-type: y mandatory;
+  text-align: center;
 }
 
 .scroller section {
   scroll-snap-align: start;
 }
+
 .hero {
   background-color: #fff;
   background: url("../assets/pattern-bg.jpg");
@@ -60,8 +89,8 @@ export default {};
 }
 
 .hero-left {
-  padding-left: 3em;
-  margin-top: 6em;
+  padding-left: 3rem;
+  margin-top: 6rem;
   /*background: -webkit-linear-gradient(#196d7c, #1b313f);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;*/
@@ -106,42 +135,69 @@ export default {};
 }
 
 .scroll .icon {
-  margin-left: 0.5em;
+  margin-left: 0.5rem;
 }
 
 @keyframes fade-in-out {
-  0% {
+  from {
     color: #1b313f00;
   }
-  100% {
+  to {
     color: #1b313fff;
   }
 }
 
-/* .projects-button {
-    color: white;
-    font-family: Nunito Sans;
-    font-size: 2.5em;
-    font-weight: 600;
-    letter-spacing: .05em;
-    background: linear-gradient(180deg, #196d7c, #1b313f);
-    padding: .5em 2em;
-    border-radius: .4em 0 .4em 0;
-    border: 5px solid #2f2f2f;
-    
-    border-left: .2em solid #f00;
-    border-top: .1em solid #f00;
-    border-right: .2em solid #0ff;
-    border-bottom: .1em solid #0ff;
+.skills {
+  height: 100vh;
+}
+
+.skills-menu {
+  align-items: center;
+}
+
+.left-skills {
+  border: 2px solid #2b515f;
+  border-radius: 2rem 1rem 1rem 2rem;
+}
+
+.right-skills {
+  border: 2px solid #2b515f;
+  border-radius: 1rem 2rem 2rem 1rem;
+}
+
+.skill {
+  position: relative;
+  height: 5rem;
+  width: 12rem;
+  color: #2b515f;
+  animation: skill-hover 500ms easer reverse forwards;
+}
+
+.skill span {
+  line-height: 5rem;
+  vertical-align: middle;
+}
+
+.skill:hover {
+  animation: skill-hover 500ms ease forwards;
+}
+
+@keyframes skill-hover {
+  from {
+    background-color: #fff;
+    color: #2b515f;
+    border-color: #2b515f;
   }
-  
-  .projects-button:hover {
-    background: linear-gradient(180deg, #1b313f, #196d7c);
-    color: #ddd;
-  } */
+  to {
+    background-color: #2b515f;
+    color: #fff;
+    transform: translateX(10%) translateY(-10%);
+    box-shadow: -0.5rem 0.5rem 8px #1f3f6f49;
+  }
+}
 
 /* animation-begin */
-.title span {
+.glitch-animation-class span {
   font-weight: bold;
   grid-row-start: 1;
   grid-column-start: 1;
@@ -156,10 +212,10 @@ export default {};
     glitch 2s ease infinite 1s alternate-reverse;
 }
 
-.title span:nth-child(odd) {
+.glitch-animation-class span:nth-child(odd) {
   --glitch-translate: 8px;
 }
-.title span:nth-child(even) {
+.glitch-animation-class span:nth-child(even) {
   --glitch-translate: -8px;
 }
 
@@ -198,8 +254,4 @@ export default {};
   }
 }
 /* animation-end */
-
-.skills {
-  height: 100vh;
-}
 </style>
