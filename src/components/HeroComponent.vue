@@ -2,7 +2,7 @@
   <section class="hero grid grid-cols-2 content-center">
     <div class="hero-left-container">
       <div class="hero-left -skew-x-12 -skew-y-1">
-        <TitleView text="YASSINE BACHA" />
+        <TitleComponent text="YASSINE BACHA" />
         <div class="subtitle hero-text">
           FRONT-END DEVELOPER<br />
           MSc IN COMPUTER VISION
@@ -21,17 +21,21 @@
 </template>
 
 <script>
-import TitleView from "./TitleView.vue";
+import TitleComponent from "./TitleComponent.vue";
 
 export default {
   name: "HeroView",
   components: {
-    TitleView,
+    TitleComponent,
   },
 };
 </script>
 
-<style>
+<style scoped>
+::-webkit-scrollbar {
+  display: none;
+}
+
 .hero {
   height: 100vh;
 }

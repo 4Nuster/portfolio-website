@@ -14,7 +14,11 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+::-webkit-scrollbar {
+  display: none;
+}
+
 .title {
   font-family: "Russo One", sans-serif;
   font-size: 8em;

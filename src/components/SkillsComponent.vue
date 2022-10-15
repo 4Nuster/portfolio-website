@@ -1,7 +1,7 @@
 <template>
   <section class="skills grid grid-cols-5">
     <div class="skill-desc col-span-3 -skew-x-12 -skew-y-1">
-      <TitleView text="SKILLS" />
+      <TitleComponent text="SKILLS" />
     </div>
     <div class="skills-menu col-span-2 flex flex-wrap -skew-x-12 -skew-y-1">
       <button class="skill left-skills"><span>JAVASCRIPT</span></button>
@@ -19,16 +19,20 @@
 </template>
 
 <script>
-import TitleView from "./TitleView.vue";
+import TitleComponent from "./TitleComponent.vue";
 
 export default {
   components: {
-    TitleView,
+    TitleComponent,
   },
 };
 </script>
 
-<style>
+<style scoped>
+::-webkit-scrollbar {
+  display: none;
+}
+
 .skills {
   height: 100vh;
   background: linear-gradient(to right, rgba(255, 255, 255, 0.8), #fff, #fff);
