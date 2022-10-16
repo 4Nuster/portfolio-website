@@ -35,7 +35,11 @@ export default {
 
 .skills {
   height: 100vh;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.8), #fff, #fff);
+  background-image: linear-gradient(to right, #fff0, #fff0, #fff0, #fff, #fff),
+    linear-gradient(to top, #fff, #fff0, #fff0, #fff),
+    url("../assets/sixteen-by-nine.png");
+  background-size: contain;
+  background-position-x: -100%;
 }
 
 .skill-desc {

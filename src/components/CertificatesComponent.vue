@@ -6,67 +6,35 @@
     <div
       class="cert-cards -skew-x-6 -skew-y-1 flex flex-nowrap gap-4 overflow-x-hidden"
     >
-      <v-card class="cert-card drop-shadow-[-.5rem_.5rem_4px_#1f3f6f49]">
-        <v-img
-          src="../assets/certificates/microclub.jpg"
-          :aspect-ratio="aspectRatio"
-          cover
-        />
-      </v-card>
-      <v-card class="cert-card drop-shadow-[-.5rem_.5rem_4px_#1f3f6f49]">
-        <v-img
-          src="../assets/certificates/nasa.png"
-          :aspect-ratio="aspectRatio"
-          cover
-        />
-      </v-card>
-      <v-card class="cert-card drop-shadow-[-.5rem_.5rem_4px_#1f3f6f49]">
-        <v-img
-          src="../assets/certificates/lhd-build.png"
-          :aspect-ratio="aspectRatio"
-          cover
-        />
-      </v-card>
-      <v-card class="cert-card drop-shadow-[-.5rem_.5rem_4px_#1f3f6f49]">
-        <v-img
-          src="../assets/certificates/ml-with-python.png"
-          :aspect-ratio="aspectRatio"
-          cover
-        />
-      </v-card>
-      <v-card class="cert-card drop-shadow-[-.5rem_.5rem_4px_#1f3f6f49]">
-        <v-img
-          src="../assets/certificates/junction.png"
-          :aspect-ratio="aspectRatio"
-          cover
-        />
-      </v-card>
-      <v-card class="cert-card drop-shadow-[-.5rem_.5rem_4px_#1f3f6f49]">
-        <v-img
-          src="../assets/certificates/intro-to-python.png"
-          :aspect-ratio="aspectRatio"
-          cover
-        />
-      </v-card>
-      <v-card class="cert-card drop-shadow-[-.5rem_.5rem_4px_#1f3f6f49]">
-        <v-img
-          src="../assets/certificates/algeria-20.png"
-          :aspect-ratio="aspectRatio"
-          cover
-        />
-      </v-card>
+      <CertificateCardComponent link="../assets/certificates/nasa.png" />
+      <CertificateCardComponent link="../assets/certificates/microclub.jpg" />
+      <CertificateCardComponent link="../assets/certificates/backend.png" />
+      <CertificateCardComponent link="../assets/certificates/frontend.png" />
+      <CertificateCardComponent link="../assets/certificates/js.png" />
+      <CertificateCardComponent
+        link="../assets/certificates/responsive-web-design.png"
+      />
+      <CertificateCardComponent link="../assets/certificates/junction.png" />
+      <CertificateCardComponent
+        link="../assets/certificates/ml-with-python.png"
+      />
+      <CertificateCardComponent
+        link="../assets/certificates/intro-to-python.png"
+      />
+      <CertificateCardComponent link="../assets/certificates/lhd-build.png" />
+      <CertificateCardComponent link="../assets/certificates/algeria-20.png" />
     </div>
   </section>
 </template>
 
 <script>
 import TitleComponent from "./TitleComponent.vue";
+import CertificateCardComponent from "./CertificateCardComponent.vue";
+
 export default {
-  data: () => ({
-    aspectRatio: 6 / 5,
-  }),
   components: {
     TitleComponent,
+    CertificateCardComponent,
   },
 };
 </script>
@@ -94,20 +62,5 @@ export default {
 .cert-cards {
   width: 120vw;
   padding-bottom: 1rem;
-}
-.cert-card {
-  /* min-height: 300px; */
-  min-width: 450px;
-  border-radius: 5%;
-  animation: scroll-certs 20s linear alternate infinite;
-}
-
-@keyframes scroll-certs {
-  from {
-    left: 10%;
-  }
-  to {
-    left: -110%;
-  }
 }
 </style>
