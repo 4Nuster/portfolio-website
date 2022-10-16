@@ -1,13 +1,13 @@
 <template>
-  <section class="hero grid grid-cols-2 content-center">
-    <div class="hero-left-container">
-      <div class="hero-left -skew-x-12 -skew-y-1">
+  <section class="h-screen grid grid-cols-2 content-center">
+    <div class="hero-left-container flex flex-col justify-center">
+      <!-- <div class="hero-left -skew-x-12 -skew-y-1"> -->
+      <div class="ml-[6rem] -skew-x-12 -skew-y-1">
         <TitleComponent text="YASSINE BACHA" />
         <div class="subtitle hero-text">
           FRONT-END DEVELOPER<br />
           MSc IN COMPUTER VISION
         </div>
-        <!-- <a class="projects-button drop-shadow-md" href="#">PROJECTS</a> -->
         <div class="scroll">
           SCROLL DOWN<font-awesome-icon
             class="icon"
@@ -36,10 +36,6 @@ export default {
   display: none;
 }
 
-.hero {
-  height: 100vh;
-}
-
 .hero-right {
   /*background-image: linear-gradient(to right, rgba(255,255,255,0.7), rgba(0,0,0,0)), url("../assets/hero\ bg.png");*/
   /* background-image: url("../assets/V4.png"); */
@@ -65,9 +61,9 @@ export default {
 .subtitle {
   text-align: left;
   font-weight: 600;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   font-family: "Nunito Sans", sans-serif;
-  line-height: 1em;
+  line-height: 2.5rem;
   color: #2b515f;
 
   margin-top: 1rem;
@@ -77,14 +73,14 @@ export default {
 .scroll {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 600;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   color: #1b313f;
 
   animation: fade-in-out 2s ease alternate-reverse infinite;
 }
 
 .scroll .icon {
-  margin-left: 0.5rem;
+  margin-left: 1rem;
 }
 
 @keyframes fade-in-out {

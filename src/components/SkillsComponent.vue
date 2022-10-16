@@ -1,19 +1,20 @@
 <template>
   <section class="skills grid grid-cols-5">
-    <div class="skill-desc col-span-3 -skew-x-12 -skew-y-1">
+    <div class="m-auto col-span-3 -skew-x-12 -skew-y-1">
       <TitleComponent text="SKILLS" />
     </div>
-    <div class="skills-menu col-span-2 flex flex-wrap -skew-x-12 -skew-y-1">
-      <button class="skill left-skills"><span>JAVASCRIPT</span></button>
-      <button class="skill right-skills"><span>HTML/CSS</span></button>
-      <button class="skill left-skills"><span>PYTHON</span></button>
-      <button class="skill right-skills"><span>JAVA</span></button>
-      <button class="skill left-skills"><span>DATABASES</span></button>
-      <button class="skill right-skills"><span>UI/UX</span></button>
-      <button class="skill left-skills"><span>GRAPHIC DESIGN</span></button>
-      <button class="skill right-skills"><span>3D MODELING</span></button>
-      <button class="skill left-skills"><span>GAME DEV</span></button>
-      <button class="skill right-skills"><span>C/C++</span></button>
+    <!-- <div class="skills-menu col-span-2 flex flex-wrap -skew-x-12 -skew-y-1"> -->
+    <div class="align-center my-[4rem] pr-[8rem] col-span-2 grid grid-cols-2 content-center gap-8 -skew-x-12 -skew-y-1">
+      <button class="skill left-skills justify-self-end"><span>JAVASCRIPT</span></button>
+      <button class="skill right-skills justify-self-start"><span>HTML/CSS</span></button>
+      <button class="skill left-skills justify-self-end"><span>PYTHON</span></button>
+      <button class="skill right-skills justify-self-start"><span>JAVA</span></button>
+      <button class="skill left-skills justify-self-end"><span>DATABASES</span></button>
+      <button class="skill right-skills justify-self-start"><span>UI/UX</span></button>
+      <button class="skill left-skills justify-self-end"><span>GRAPHIC DESIGN</span></button>
+      <button class="skill right-skills justify-self-start"><span>3D MODELING</span></button>
+      <button class="skill left-skills justify-self-end"><span>GAME DEV</span></button>
+      <button class="skill right-skills justify-self-start"><span>C/C++</span></button>
     </div>
   </section>
 </template>
@@ -42,29 +43,18 @@ export default {
   background-position-x: -100%;
 }
 
-.skill-desc {
-  margin: auto;
-}
-
-.skills-menu {
-  align-items: center;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-
 .left-skills {
   border: 3px solid #196d7c;
   border-left-width: 6px;
   border-radius: 2rem 0.5rem 0.5rem 2rem;
-  margin-right: 1.8rem;
-  background: linear-gradient(to right, #f8f8f8, #fff, #fff);
+  background: linear-gradient(to right, #eee, #fff, #fff);
 }
 
 .right-skills {
   border: 3px solid #196d7c;
   border-right-width: 6px;
   border-radius: 0.5rem 2rem 2rem 0.5rem;
-  background: linear-gradient(to left, #f8f8f8, #fff, #fff);
+  background: linear-gradient(to left, #eee, #fff, #fff);
 }
 
 .skill {
