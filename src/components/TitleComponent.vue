@@ -21,7 +21,8 @@ export default {
 
 .title {
   font-family: "Russo One", sans-serif;
-  font-size: 8em;
+  /* font-size: 8em; */
+  font-size: clamp(1rem, 10vw, 8rem);
   line-height: 0.8em;
   text-align: left;
   color: #196d7c;

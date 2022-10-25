@@ -1,9 +1,9 @@
 <template>
   <section class="h-screen grid grid-cols-2 content-center">
-    <div class="hero-left-container flex flex-col justify-center">
+    <div class="bg-gradient-to-r from-[#fffc] to-white flex flex-col justify-center">
       <!-- <div class="hero-left -skew-x-12 -skew-y-1"> -->
       <div class="ml-[6rem] -skew-x-12 -skew-y-1">
-        <TitleComponent text="YASSINE BACHA" />
+        <TitleComponent text="YASSINE BACHA"/>
         <div class="subtitle hero-text">
           FRONT-END DEVELOPER<br />
           MSc IN COMPUTER VISION
@@ -44,14 +44,6 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-}
-
-.hero-left {
-  padding-left: 3rem;
-  margin-top: 6rem;
-  /*background: -webkit-linear-gradient(#196d7c, #1b313f);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;*/
 }
 
 .hero-left-container {
