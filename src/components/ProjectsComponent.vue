@@ -1,22 +1,53 @@
 <template>
   <section class="projects">
     <div class="bg-transparent d-flex min-h-[100vh]">
-      <v-tabs
-        v-model="tab"
-        direction="vertical"
-        color="primary"
-        class="min-w-[30vw] ml-[2em] mt-[2em]"
-      >
+      <div class="d-flex flex-col min-w-[30vw]  max-w-[30vw] ml-[2em] mt-[2em]">
         <div class="-skew-x-12 -skew-y-1">
           <TitleComponent text="PROJECTS" class="title"/>
         </div>
-        <v-tab v-for="item in projectsList" :value="item.option" :key="item.title">
-          {{item.title}}
-        </v-tab>
-      </v-tabs>
+        <v-tabs
+          v-model="category"
+          color="primary"
+          show-arrows
+        >
+          <v-tab v-for="item in categories" :value="item.option" :key="item.title">
+            {{item.title}}
+          </v-tab>
+        </v-tabs>
+        <v-window v-model="category">
+          <v-window-item value="all">
+            <v-tabs
+              v-model="tab"
+              direction="vertical"
+              color="primary"
+            >
+              <v-tab v-for="item in projectsList" :value="item.option" :key="item.title">
+                {{item.title}}
+              </v-tab>
+            </v-tabs>
+          </v-window-item>
+
+          <v-window-item value="webdev">
+          </v-window-item>
+
+          <v-window-item value="uiux">
+          </v-window-item>
+
+          <v-window-item value="ai">
+          </v-window-item>
+
+          <v-window-item value="gamedev">
+          </v-window-item>
+
+          <v-window-item value="softdev">
+          </v-window-item>
+        </v-window>
+        
+      </div>
+      
       <v-window v-model="tab">
         <v-window-item value="option-1">
-          <v-card flat class="min-h-[100vh] min-w-[70vw] bg-transparent">
+          <v-card flat class="min-h-[100vh] min-w-[70vw] max-h-[70vw] bg-transparent">
             <v-card-text>
               <p>
                 Sed aliquam ultrices mauris. Donec posuere vulputate arcu. Morbi ac felis. Etiam feugiat lorem non metus. Sed a libero.
@@ -33,7 +64,7 @@
           </v-card>
         </v-window-item>
         <v-window-item value="option-2">
-          <v-card flat class="min-h-[100vh] min-w-[70vw] bg-transparent">
+          <v-card flat class="min-h-[100vh] min-w-[70vw] max-h-[70vw] bg-transparent">
             <v-card-text>
               <p>
                 Morbi nec metus. Suspendisse faucibus, nunc et pellentesque egestas, lacus ante convallis tellus, vitae iaculis lacus elit id tortor. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Nunc sed turpis.
@@ -58,7 +89,7 @@
           </v-card>
         </v-window-item>
         <v-window-item value="option-3">
-          <v-card flat class="min-h-[100vh] min-w-[70vw] bg-transparent">
+          <v-card flat class="min-h-[100vh] min-w-[70vw] max-h-[70vw] bg-transparent">
             <v-card-text>
               <p>
                 Fusce a quam. Phasellus nec sem in justo pellentesque facilisis. Nam eget dui. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. In dui magna, posuere eget, vestibulum et, tempor auctor, justo.
@@ -90,6 +121,15 @@ export default {
       {option: "option-1", title: "Project 1"},
       {option: "option-2", title: "Project 2"},
       {option: "option-3", title: "Project 3"},
+    ],
+    category: 'all',
+    categories: [
+      {option: "all", title: 'All'},
+      {option: "webdev", title: 'Web Development'},
+      {option: "uiux", title: 'UI/UX Design'},
+      {option: "ai", title: 'Artificial Intelligence'},
+      {option: "gamedev", title: '3D & Game Development'},
+      {option: "softdev", title: 'Software Development'}
     ]
   }),
 };

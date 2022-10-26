@@ -9,12 +9,12 @@
       <button class="skill right-skills justify-self-start"><span>HTML/CSS</span></button>
       <button class="skill left-skills justify-self-end"><span>PYTHON</span></button>
       <button class="skill right-skills justify-self-start"><span>JAVA</span></button>
-      <button class="skill left-skills justify-self-end"><span>DATABASES</span></button>
-      <button class="skill right-skills justify-self-start"><span>UI/UX</span></button>
-      <button class="skill left-skills justify-self-end"><span>GRAPHIC DESIGN</span></button>
-      <button class="skill right-skills justify-self-start"><span>3D MODELING</span></button>
-      <button class="skill left-skills justify-self-end"><span>GAME DEV</span></button>
-      <button class="skill right-skills justify-self-start"><span>C/C++</span></button>
+      <button class="skill left-skills justify-self-end"><span>C/C++</span></button>
+      <button class="skill right-skills justify-self-start"><span>DATABASES</span></button>
+      <button class="skill left-skills justify-self-end"><span>UI/UX</span></button>
+      <button class="skill right-skills justify-self-start"><span>GRAPHIC DESIGN</span></button>
+      <button class="skill left-skills justify-self-end"><span>3D MODELING</span></button>
+      <button class="skill right-skills justify-self-start"><span>GAME DEV</span></button>
     </div>
   </section>
 </template>
