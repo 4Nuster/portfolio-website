@@ -1,22 +1,25 @@
 <template>
   <article class="scroller h-screen">
-    <HeroView />
-    <SkillsView />
+    <HeroComponent />
+    <SkillsComponent />
     <CertificatesComponent />
+    <ProjectsComponent />
   </article>
 </template>
 
 <script>
-import HeroView from "../components/HeroComponent.vue";
-import SkillsView from "../components/SkillsComponent.vue";
+import HeroComponent from "../components/HeroComponent.vue";
+import SkillsComponent from "../components/SkillsComponent.vue";
 import CertificatesComponent from "../components/CertificatesComponent.vue";
+import ProjectsComponent from "../components/ProjectsComponent.vue";
 
 export default {
   name: "MainView",
   components: {
-    HeroView,
-    SkillsView,
+    HeroComponent,
+    SkillsComponent,
     CertificatesComponent,
+    ProjectsComponent,
   },
 };
 </script>
