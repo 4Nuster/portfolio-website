@@ -8,7 +8,7 @@
         class="min-w-[30vw] ml-[2em] mt-[2em]"
       >
         <div class="-skew-x-12 -skew-y-1">
-          <TitleComponent text="PROJECTS" />
+          <TitleComponent text="PROJECTS" class="title"/>
         </div>
         <v-tab v-for="item in projectsList" :value="item.option" :key="item.title">
           {{item.title}}
@@ -108,5 +108,13 @@ export default {
     #fff,
     #fff
   );
+}
+
+.title {
+  padding-top: 1rem;
+  padding-bottom: 1.3rem;
+  text-align: center;
+  font-size: clamp(1rem, 10vw, 4rem);
+  -webkit-text-stroke: 0.2rem #fff;
 }
 </style>
