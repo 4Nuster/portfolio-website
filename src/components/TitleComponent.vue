@@ -26,7 +26,7 @@ export default {
   line-height: 0.8em;
   text-align: left;
   color: #196d7c;
-  -webkit-text-stroke: 0.3rem #fff;
+  -webkit-text-stroke: 0.25rem #fff;
 
   display: grid;
   grid-template-columns: 1fr;
