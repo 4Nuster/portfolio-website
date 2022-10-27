@@ -8,13 +8,14 @@
         <v-tabs
           v-model="category"
           color="primary"
+          class="-skew-x-12 -skew-y-1"
           show-arrows
         >
           <v-tab v-for="item in categories" :value="item.option" :key="item.title">
             {{item.title}}
           </v-tab>
         </v-tabs>
-        <v-window v-model="category">
+        <v-window v-model="category" class="-skew-x-6 -skew-y-1">
           <v-window-item value="all">
             <v-tabs
               v-model="tab"
