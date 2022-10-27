@@ -8,22 +8,24 @@
         <v-tabs
           v-model="category"
           color="primary"
-          class="-skew-x-12 -skew-y-1"
+          class="-skew-x-12 -skew-y-1 tabs"
           show-arrows
         >
-          <v-tab v-for="item in categories" :value="item.option" :key="item.title">
+          <v-tab v-for="item in categories" :value="item.option" :key="item.title" class="tab">
             {{item.title}}
           </v-tab>
         </v-tabs>
-        <v-window v-model="category" class="-skew-x-6 -skew-y-1">
+        <v-window v-model="category">
           <v-window-item value="all">
             <v-tabs
               v-model="tab"
               direction="vertical"
               color="primary"
             >
-              <v-tab v-for="item in projectsList" :value="item.option" :key="item.title">
-                {{item.title}}
+              <v-tab v-for="item in projectsList" :value="item.option" :key="item.title" class="tab">
+                <span class="-skew-x-12">
+                  {{item.title}}
+                </span>
               </v-tab>
             </v-tabs>
           </v-window-item>
@@ -158,4 +160,14 @@ export default {
   font-size: clamp(1rem, 10vw, 4rem);
   -webkit-text-stroke: 0.2rem #fff;
 }
+
+.tabs {
+  font-size: clamp(.5rem, 4vh, 2rem);
+}
+.tab {
+  font-weight: 600;
+  font-family: "Nunito Sans", sans-serif;
+  color: #0b313f;
+}
+
 </style>

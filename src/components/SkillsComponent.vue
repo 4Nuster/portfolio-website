@@ -1,11 +1,12 @@
 <template>
   <section class="skills grid grid-cols-5">
-    <div class="m-auto col-span-3 -skew-x-12 -skew-y-1">
+    <iframe class="col-span-3 min-h-[100vh]" v-if="skill == 'js'" src='https://my.spline.design/untitled-b4c9e929a7288bca4d4a5de0ee06bfac/' frameborder='0' width='100%' height='100%'></iframe>
+    <div v-if="skill == ''" class="m-auto col-span-3 -skew-x-12 -skew-y-1">
       <TitleComponent text="SKILLS" />
     </div>
     <!-- <div class="skills-menu col-span-2 flex flex-wrap -skew-x-12 -skew-y-1"> -->
     <div class="align-center my-[4rem] pr-[8rem] col-span-2 grid grid-cols-2 content-center gap-8 -skew-x-12 -skew-y-1">
-      <button class="skill left-skills justify-self-end"><span>JAVASCRIPT</span></button>
+      <button class="skill left-skills justify-self-end" @click="skill = 'js'"><span>JAVASCRIPT</span></button>
       <button class="skill right-skills justify-self-start"><span>HTML/CSS</span></button>
       <button class="skill left-skills justify-self-end"><span>PYTHON</span></button>
       <button class="skill right-skills justify-self-start"><span>JAVA</span></button>
@@ -26,6 +27,9 @@ export default {
   components: {
     TitleComponent,
   },
+  data: () => ({
+    skill: ""
+  })
 };
 </script>
 
